@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/mccahan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ryan.mccahan.net
+  * I am mccahan (https://keybase.io/mccahan) on keybase.
+  * I have a public key with fingerprint B177 B2B0 842B 2495 8028  DC0C 8FA6 94D1 8734 BCF9
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010128f5f9f38937201d13970807421badb32fa8275ad75510a2f97b6772ba24fa060a",
+      "fingerprint": "b177b2b0842b24958028dc0c8fa694d18734bcf9",
+      "host": "keybase.io",
+      "key_id": "8fa694d18734bcf9",
+      "kid": "010128f5f9f38937201d13970807421badb32fa8275ad75510a2f97b6772ba24fa060a",
+      "uid": "12f9b8e64fb0e87dd7970ac2983a2f19",
+      "username": "mccahan"
+    },
+    "merkle_root": {
+      "ctime": 1612154069,
+      "hash_meta": "cd924b6b16001c96d5273067de9336a475578a8af2347aa9bc2959427768d617",
+      "seqno": 18971110
+    },
+    "revoke": {
+      "sig_ids": [
+        "716a8b985fab55fab66a0280924d327c9ac018b5b476ea630cd38244052780560f"
+      ]
+    },
+    "service": {
+      "hostname": "ryan.mccahan.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1612154117,
+  "expire_in": 157680000,
+  "prev": "109334fba0c9d19fb9d41a021d886a8fce34619154582d7fd893a4c33bb84edb",
+  "seqno": 44,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMLAAnicrVNbaB1FGD7p1QYixVaKF4hsqA9tGmZmZ+cSXxovbZCA9VIaaOPJzM7s
+Ocs52T3ubo7GcFTSBqOmSrUPBtNaCSKoVZD6VARbC9WqtcWqVRtbLUIVi0VCCwGD
+/4aICD66D7vMzvd///d9/8yxlsWF5qbGODlxpvb7HU2fHn18sNC/ZnTpsKNjM+R0
+DjsVO/+xVWPTrFgJjdPpIIwwEYEXyMAV0uUEYYNdyZFAnBKsldEuCZQg3FOGex5G
+igSSa8Y50YrQQCGGlNPuBGFUskktCaMMaDXmXBONBCWaUOkJRITxkS8CxSQ1WHCX
+aj+QUFiO07wCxGmV2o4whn+wKM7L+w/8/6x7cJ4Ow6YWltFAIyu4MRyolE+kcKEO
+530HU5tEasACesD3VVlFTqPdGbBJpWqLSRxnebZ+FuYIzDDBHkVMgj+VlosDNlNQ
+6BtJqGYaM4SwL5nxCHcR48ZK12WKglAulFABcSlXSmpQ4ElKOGfCMMxBRmofiWLo
+ICTHGCOQkNh6XLF59zQsQWyp07nd4ZgpoaXwAqW9/MWYghkg6G9cwn2pfISF9jTl
+zCrmIt+4glCKQJFAHkOB09fIuyX10J8nz+e04D8ZUlHHQggdkc1AVi2Js9iPq7Bb
+zrJa2pmHkw3VcvijVhcXiIo6jAycFKio2yQN4wisAPLfuWHM2x37WC1MbDHMER74
+R/DkfWw9nxeCwGBYCvnSYBloaSgGg9gIAcYD37qUYQlcniCGBwbOiKK+62otqDX6
+nyApBZ2qBJyQXqSywcQ6jaMf7lhSaGouLFu6KL9CheYVK/++WMcfXD63buSTuw5c
+GJm7oaWxp2d6dv89p2/b3N0ysWr8nclXr67ubh3t3bRtpv9k3+yXR2afnwva2l7b
+PGfW+zuGro0VLn1eue5g7b2R73/on54KJr659+19vS/0nejpuvWJpz+baFxs7Cqu
+PUXszouHz51t+6O4+wKpvs43vrV78bZnx7dWqg/f/vKRyZ97Tn/35n3T+5859Upr
+q3zoo9LhypYHPj73wdT7v86O6PNs+IvGnk2/LerquH9L+fK6/smz+zZ2rz9+/bsu
+v5K+uHft6NXtl789Vrr70plD4ZpfJrf2HDgfLzk582N91U31DX/euXLFS20/TV25
+dmPL6jeWP7nzq5lbusa+7n7u0FNyV++y5pv3jvX9BcE+gL4=
+=tZ9U
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mccahan
+
+==================================================================
+
