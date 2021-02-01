@@ -8,10 +8,15 @@ body {
 
 #hero {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+
+  @media (min-width: 550px) {
+    min-height: 100vh;
+  }
 
   .section-content {
     position: relative;
@@ -45,6 +50,10 @@ body {
       height: 120%;
       transform: translate(-50%,-50%) rotate(2.04deg);
       z-index: -1;
+
+      @media (max-width: 650px) {
+        border-radius: 30px;
+      }
     }
 
     @media (max-width: 450px) {
