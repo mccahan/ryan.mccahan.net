@@ -58,12 +58,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 40px 20px;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s ease-out;
-  transition: opacity 0.4s ease-out;
-}
-html.wf-active #hero {
-  opacity: 1;
 }
 @media (min-width: 550px) {
   #hero {
@@ -160,6 +154,10 @@ html.wf-active #hero {
   margin: 0;
   font-size: 40px;
   font-weight: 600;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+  line-height: 49px;
 }
 #hero .section-content .info h1 {
   font-size: 26px;
@@ -174,6 +172,9 @@ html.wf-active #hero {
     font-size: 40px;
   }
 }
+html.wf-active #hero .section-content .info h1, html.wf-inactive #hero .section-content .info h1 {
+  opacity: 1;
+}
 #hero .section-content .info h1 span {
   -webkit-text-decoration: underline dotted #ccc;
           text-decoration: underline dotted #ccc;
@@ -182,6 +183,10 @@ html.wf-active #hero {
   font-size: 34px;
   font-weight: 400;
   margin: 15px 0 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+  line-height: 41px;
 }
 #hero .section-content .info h2 {
   font-size: 18px;
@@ -195,6 +200,9 @@ html.wf-active #hero {
   #hero .section-content .info h2 {
     font-size: 34px;
   }
+}
+html.wf-active #hero .section-content .info h2, html.wf-inactive #hero .section-content .info h2 {
+  opacity: 1;
 }
 #hero .section-content .info > a {
   font-size: 36px;
@@ -209,6 +217,10 @@ html.wf-active #hero {
   transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
   position: relative;
   display: inline-block;
+  line-height: 41px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
 }
 #hero .section-content .info > a {
   font-size: 18px;
@@ -222,6 +234,9 @@ html.wf-active #hero {
   #hero .section-content .info > a {
     font-size: 34px;
   }
+}
+html.wf-active #hero .section-content .info > a, html.wf-inactive #hero .section-content .info > a {
+  opacity: 1;
 }
 @media (max-width: 450px) {
   #hero .section-content .info > a {
@@ -259,6 +274,15 @@ html.wf-active #hero {
     margin: 25px auto 0;
   }
 }
+#hero .section-content .info .social li {
+  min-width: 55px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+html.wf-active #hero .section-content .info .social li, html.wf-inactive #hero .section-content .info .social li {
+  opacity: 1;
+}
 #hero .section-content .info .social svg {
   max-width: 48px;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
@@ -287,6 +311,12 @@ html.wf-active #hero {
   margin: 20px auto 0;
   -webkit-filter: grayscale(0.1);
           filter: grayscale(0.1);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+html.wf-active #hero .section-content .photo img, html.wf-inactive #hero .section-content .photo img {
+  opacity: 1;
 }
 
 @-webkit-keyframes gentleRocking {

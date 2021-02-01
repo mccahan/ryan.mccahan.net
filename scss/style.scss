@@ -13,12 +13,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-
-  html.wf-active & {
-    opacity: 1;
-  }
 
   @media (min-width: 550px) {
     min-height: 100vh;
@@ -98,6 +92,13 @@ body {
         font-size: 40px;
         font-weight: 600;
         @include fluid-type(512px, 1200px, 26px, 40px);
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+        line-height: 49px;
+
+        html.wf-active &, html.wf-inactive & {
+          opacity: 1;
+        }
 
         span {
           text-decoration: underline dotted #ccc;
@@ -109,6 +110,13 @@ body {
         @include fluid-type(512px, 1200px, 18px, 34px);
         font-weight: 400;
         margin: 15px 0 0;
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+        line-height: 41px;
+
+        html.wf-active &, html.wf-inactive & {
+          opacity: 1;
+        }
       }
 
       > a {
@@ -122,6 +130,13 @@ body {
         transition: clip-path 275ms ease;
         position: relative;
         display: inline-block;
+        line-height: 41px;
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+
+        html.wf-active &, html.wf-inactive & {
+          opacity: 1;
+        }
 
         @media (max-width: 450px) {
           margin-top: 15px;
@@ -152,6 +167,16 @@ body {
           margin: 25px auto 0;
         }
 
+        li {
+          min-width: 55px;
+          opacity: 0;
+          transition: opacity 0.4s ease-out;
+
+          html.wf-active &, html.wf-inactive & {
+            opacity: 1;
+          }
+        }
+
         svg {
           max-width: 48px;
           transition: transform 0.2s ease-in-out;
@@ -177,6 +202,12 @@ body {
         display: block;
         margin: 20px auto 0;
         filter: grayscale(0.10);
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+
+        html.wf-active &, html.wf-inactive & {
+          opacity: 1;
+        }
       }
     }
   }
