@@ -44,7 +44,7 @@ body {
       position: absolute;
       top: 50%;
       left: 50%;
-      background: linear-gradient(180deg, #65BEFE 0%, #5876C5 100%);
+      background: linear-gradient(140deg, #65BEFE 0%, #5876C5 100%);
       border-radius: 77px;
       width: 90%;
       height: 120%;
@@ -94,7 +94,7 @@ body {
         @include fluid-type(512px, 1200px, 26px, 40px);
         opacity: 0;
         transition: opacity 0.4s ease-out;
-        line-height: 49px;
+        line-height: 1.1em;
 
         html.wf-active &, html.wf-inactive & {
           opacity: 1;
@@ -112,7 +112,7 @@ body {
         margin: 15px 0 0;
         opacity: 0;
         transition: opacity 0.4s ease-out;
-        line-height: 41px;
+        line-height: 1.2em;
 
         html.wf-active &, html.wf-inactive & {
           opacity: 1;
@@ -130,7 +130,7 @@ body {
         transition: clip-path 275ms ease;
         position: relative;
         display: inline-block;
-        line-height: 41px;
+        line-height: 1.1em;
         opacity: 0;
         transition: opacity 0.4s ease-out;
 
@@ -151,7 +151,12 @@ body {
           color: #5876C5;
           text-decoration: underline;
           clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-          transition: clip-path 275ms ease;
+          transition: clip-path 275ms ease, opacity 0.4s ease-out;
+          opacity: 0;
+
+          html.wf-active &, html.wf-inactive & {
+            opacity: 1;
+          }
         }
       }
 
@@ -184,7 +189,7 @@ body {
         }
 
         a:hover svg {
-          transform: scale(1);
+          transform: scale(1) !important;
         }
       }
     }

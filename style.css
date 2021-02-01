@@ -99,8 +99,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#65BEFE), to(#5876C5));
-  background: linear-gradient(180deg, #65BEFE 0%, #5876C5 100%);
+  background: linear-gradient(140deg, #65BEFE 0%, #5876C5 100%);
   border-radius: 77px;
   width: 90%;
   height: 120%;
@@ -157,7 +156,7 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
-  line-height: 49px;
+  line-height: 1.1em;
 }
 #hero .section-content .info h1 {
   font-size: 26px;
@@ -186,7 +185,7 @@ html.wf-active #hero .section-content .info h1, html.wf-inactive #hero .section-
   opacity: 0;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
-  line-height: 41px;
+  line-height: 1.2em;
 }
 #hero .section-content .info h2 {
   font-size: 18px;
@@ -217,7 +216,7 @@ html.wf-active #hero .section-content .info h2, html.wf-inactive #hero .section-
   transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
   position: relative;
   display: inline-block;
-  line-height: 41px;
+  line-height: 1.1em;
   opacity: 0;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
@@ -254,10 +253,14 @@ html.wf-active #hero .section-content .info > a, html.wf-inactive #hero .section
   text-decoration: underline;
   -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
           clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-  -webkit-transition: -webkit-clip-path 275ms ease;
-  transition: -webkit-clip-path 275ms ease;
-  transition: clip-path 275ms ease;
-  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+  -webkit-transition: opacity 0.4s ease-out, -webkit-clip-path 275ms ease;
+  transition: opacity 0.4s ease-out, -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease, opacity 0.4s ease-out;
+  transition: clip-path 275ms ease, opacity 0.4s ease-out, -webkit-clip-path 275ms ease;
+  opacity: 0;
+}
+html.wf-active #hero .section-content .info > a::before, html.wf-inactive #hero .section-content .info > a::before {
+  opacity: 1;
 }
 #hero .section-content .info .social {
   display: grid;
@@ -293,8 +296,8 @@ html.wf-active #hero .section-content .info .social li, html.wf-inactive #hero .
           transform: scale(0.8);
 }
 #hero .section-content .info .social a:hover svg {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
 #hero .section-content .photo {
   max-width: 30vw;
