@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ryan McCahan Development</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?<?php echo filemtime(__DIR__.'/style.css'); ?>">
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="" />
@@ -40,6 +40,6 @@
 
   <?php /* The following line is used ONLY for development and can be removed in production */ ?>
   <?php if (php_sapi_name() == 'cli-server'): ?><script src="//localhost:35729/livereload.js"></script><?php endif; ?>
-  <script src="dist/main.min.js"></script>
+  <script src="dist/main.min.js?<?php echo filemtime(__DIR__.'/dist/main.min.js'); ?>"></script>
 </body>
 </html>

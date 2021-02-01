@@ -25,6 +25,15 @@ body {
     max-width: 1000px;
     align-items: center;
 
+    @media (max-width: 650px) {
+      padding: 40px 40px 20px;
+      border-radius: 35px;
+    }
+
+    @media (max-width: 450px) {
+      display: block;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -38,13 +47,22 @@ body {
       z-index: -1;
     }
 
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+
     .info {
       margin-right: 40px;
+
+      @media (max-width: 450px) {
+        margin-right: 0;
+      }
 
       h1 {
         margin: 0;
         font-size: 40px;
         font-weight: 600;
+        @include fluid-type(512px, 1200px, 26px, 40px);
 
         span {
           text-decoration: underline dotted #ccc;
@@ -53,12 +71,14 @@ body {
 
       h2 {
         font-size: 34px;
+        @include fluid-type(512px, 1200px, 18px, 34px);
         font-weight: 400;
         margin: 15px 0 0;
       }
 
       > a {
         font-size: 36px;
+        @include fluid-type(512px, 1200px, 18px, 34px);
         font-weight: 400;
         margin: 0;
         text-decoration: underline;
@@ -67,6 +87,10 @@ body {
         transition: clip-path 275ms ease;
         position: relative;
         display: inline-block;
+
+        @media (max-width: 450px) {
+          margin-top: 15px;
+        }
 
         &:hover::before {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -89,6 +113,10 @@ body {
         padding: 0;
         margin: 25px 0 0;
 
+        @media (max-width: 450px) {
+          margin: 25px auto 0;
+        }
+
         svg {
           max-width: 48px;
           transition: transform 0.2s ease-in-out;
@@ -102,8 +130,17 @@ body {
     }
 
     .photo {
+      max-width: 30vw;
+
+      @media (max-width: 450px) {
+        text-align: center;
+        margin: 0 auto;
+      }
+
       img {
         border-radius: 50%;
+        display: block;
+        margin: 20px auto 0;
       }
     }
   }
