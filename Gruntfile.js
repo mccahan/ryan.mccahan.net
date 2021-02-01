@@ -38,6 +38,9 @@ module.exports = function(grunt) {
 						'node_modules/@popperjs/core/dist/umd/popper.min.js',
 						'node_modules/tippy.js/dist/tippy-bundle.umd.min.js',
             'js/main.js'
+          ],
+					'dist/dependencies.min.js': [
+						'js/gsap.min.js'
           ]
         }
       },

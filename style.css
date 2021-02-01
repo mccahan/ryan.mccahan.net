@@ -73,8 +73,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.1);
   border-radius: 77px;
   padding: 80px 80px;
   width: 100%;
@@ -82,6 +80,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 @media (max-width: 650px) {
   #hero .section-content {
@@ -94,7 +94,7 @@ body {
     display: block;
   }
 }
-#hero .section-content:before {
+#hero .section-content .underlay-blue {
   content: "";
   position: absolute;
   top: 50%;
@@ -103,8 +103,8 @@ body {
   border-radius: 77px;
   width: 90%;
   height: 120%;
-  -webkit-transform: translate(-50%, -50%) rotate(2.4deg);
-          transform: translate(-50%, -50%) rotate(2.4deg);
+  -webkit-transform: translate(-50%, -50%) translateZ(-1em) rotate(2.4deg);
+          transform: translate(-50%, -50%) translateZ(-1em) rotate(2.4deg);
   z-index: -1;
   -webkit-animation: gentleRocking ease-in-out 5s;
           animation: gentleRocking ease-in-out 5s;
@@ -112,13 +112,14 @@ body {
           animation-iteration-count: infinite;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
+  opacity: 0;
 }
 @media (max-width: 650px) {
-  #hero .section-content:before {
+  #hero .section-content .underlay-blue {
     border-radius: 30px;
   }
 }
-#hero .section-content:after {
+#hero .section-content .underlay-gray {
   content: "";
   position: absolute;
   top: 50%;
@@ -127,12 +128,13 @@ body {
   border-radius: 77px;
   width: 90%;
   height: 120%;
-  -webkit-transform: translate(-80%, -50%) rotate(-1deg);
-          transform: translate(-80%, -50%) rotate(-1deg);
+  -webkit-transform: translate(-80%, -50%) rotate(-1deg) translateZ(-1.5em);
+          transform: translate(-80%, -50%) rotate(-1deg) translateZ(-1.5em);
   z-index: -2;
+  opacity: 0;
 }
 @media (max-width: 650px) {
-  #hero .section-content:after {
+  #hero .section-content .underlay-gray {
     border-radius: 30px;
   }
 }
@@ -154,8 +156,6 @@ body {
   font-size: 40px;
   font-weight: 600;
   opacity: 0;
-  -webkit-transition: opacity 0.4s ease-out;
-  transition: opacity 0.4s ease-out;
   line-height: 1.1em;
 }
 #hero .section-content .info h1 {
@@ -171,9 +171,6 @@ body {
     font-size: 40px;
   }
 }
-html.wf-active #hero .section-content .info h1, html.wf-inactive #hero .section-content .info h1 {
-  opacity: 1;
-}
 #hero .section-content .info h1 span {
   -webkit-text-decoration: underline dotted #ccc;
           text-decoration: underline dotted #ccc;
@@ -182,9 +179,6 @@ html.wf-active #hero .section-content .info h1, html.wf-inactive #hero .section-
   font-size: 34px;
   font-weight: 400;
   margin: 15px 0 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s ease-out;
-  transition: opacity 0.4s ease-out;
   line-height: 1.2em;
 }
 #hero .section-content .info h2 {
@@ -200,8 +194,9 @@ html.wf-active #hero .section-content .info h1, html.wf-inactive #hero .section-
     font-size: 34px;
   }
 }
-html.wf-active #hero .section-content .info h2, html.wf-inactive #hero .section-content .info h2 {
-  opacity: 1;
+#hero .section-content .info h2 span {
+  display: inline-block;
+  opacity: 0;
 }
 #hero .section-content .info > a {
   font-size: 36px;
@@ -218,8 +213,6 @@ html.wf-active #hero .section-content .info h2, html.wf-inactive #hero .section-
   display: inline-block;
   line-height: 1.1em;
   opacity: 0;
-  -webkit-transition: opacity 0.4s ease-out;
-  transition: opacity 0.4s ease-out;
 }
 #hero .section-content .info > a {
   font-size: 18px;
@@ -233,9 +226,6 @@ html.wf-active #hero .section-content .info h2, html.wf-inactive #hero .section-
   #hero .section-content .info > a {
     font-size: 34px;
   }
-}
-html.wf-active #hero .section-content .info > a, html.wf-inactive #hero .section-content .info > a {
-  opacity: 1;
 }
 @media (max-width: 450px) {
   #hero .section-content .info > a {
@@ -280,11 +270,6 @@ html.wf-active #hero .section-content .info > a::before, html.wf-inactive #hero 
 #hero .section-content .info .social li {
   min-width: 55px;
   opacity: 0;
-  -webkit-transition: opacity 0.4s ease-out;
-  transition: opacity 0.4s ease-out;
-}
-html.wf-active #hero .section-content .info .social li, html.wf-inactive #hero .section-content .info .social li {
-  opacity: 1;
 }
 #hero .section-content .info .social svg {
   max-width: 48px;
@@ -324,31 +309,31 @@ html.wf-active #hero .section-content .photo img, html.wf-inactive #hero .sectio
 
 @-webkit-keyframes gentleRocking {
   0% {
-    -webkit-transform: rotate(2.4deg) translate(-50%, -50%);
-            transform: rotate(2.4deg) translate(-50%, -50%);
+    -webkit-transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
+            transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
   }
   50% {
-    -webkit-transform: rotate(-1deg) translate(-50%, -50%);
-            transform: rotate(-1deg) translate(-50%, -50%);
+    -webkit-transform: rotate(-1deg) translate(-50%, -50%) translateZ(-1em);
+            transform: rotate(-1deg) translate(-50%, -50%) translateZ(-1em);
   }
   100% {
-    -webkit-transform: rotate(2.4deg) translate(-50%, -50%);
-            transform: rotate(2.4deg) translate(-50%, -50%);
+    -webkit-transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
+            transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
   }
 }
 
 @keyframes gentleRocking {
   0% {
-    -webkit-transform: rotate(2.4deg) translate(-50%, -50%);
-            transform: rotate(2.4deg) translate(-50%, -50%);
+    -webkit-transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
+            transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
   }
   50% {
-    -webkit-transform: rotate(-1deg) translate(-50%, -50%);
-            transform: rotate(-1deg) translate(-50%, -50%);
+    -webkit-transform: rotate(-1deg) translate(-50%, -50%) translateZ(-1em);
+            transform: rotate(-1deg) translate(-50%, -50%) translateZ(-1em);
   }
   100% {
-    -webkit-transform: rotate(2.4deg) translate(-50%, -50%);
-            transform: rotate(2.4deg) translate(-50%, -50%);
+    -webkit-transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
+            transform: rotate(2.4deg) translate(-50%, -50%) translateZ(-1em);
   }
 }
 /*# sourceMappingURL=style.css.map */

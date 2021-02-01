@@ -25,9 +25,10 @@
 
   <section id="hero">
     <div class="section-content">
+      <span class="underlay-gray"></span><span class="underlay-blue"></span>
       <div class="info">
         <h1>Ryan <span class="tippy" data-tippy-content="Mick-Cann">McCahan</span></h1>
-        <h2>CTO<br>Developer</h2>
+        <h2><span>CTO</span><br><span>Developer</span></h2>
         <a href="mailto:ryan@mccahan.net" class="hoverable" data-content="ryan@mccahan.net">ryan@mccahan.net</a>
         <ul class="social">
           <li><a href="https://github.com/mccahan" aria-label="Visit my GitHub" data-tippy-content="GitHub"><?php echo file_get_contents(__DIR__.'/dist/icon-github.svg'); ?></a></li>
@@ -44,6 +45,7 @@
 
   <?php /* The following line is used ONLY for development and can be removed in production */ ?>
   <?php if (php_sapi_name() == 'cli-server'): ?><script src="//localhost:35729/livereload.js"></script><?php endif; ?>
+  <script src="dist/dependencies.min.js?<?php echo filemtime(__DIR__.'/dist/dependencies.min.js'); ?>"></script>
   <script src="dist/main.min.js?<?php echo filemtime(__DIR__.'/dist/main.min.js'); ?>"></script>
 </body>
 </html>
