@@ -58,6 +58,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 40px 20px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+html.wf-active #hero {
+  opacity: 1;
 }
 @media (min-width: 550px) {
   #hero {
@@ -279,6 +285,8 @@ body {
   border-radius: 50%;
   display: block;
   margin: 20px auto 0;
+  -webkit-filter: grayscale(0.1);
+          filter: grayscale(0.1);
 }
 
 @-webkit-keyframes gentleRocking {

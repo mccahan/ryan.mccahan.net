@@ -13,6 +13,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+
+  html.wf-active & {
+    opacity: 1;
+  }
 
   @media (min-width: 550px) {
     min-height: 100vh;
@@ -170,6 +176,7 @@ body {
         border-radius: 50%;
         display: block;
         margin: 20px auto 0;
+        filter: grayscale(0.10);
       }
     }
   }

@@ -5,17 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ryan McCahan Development</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({google: {families: ['Inter:400,700']}});
+  </script>
   <link rel="stylesheet" href="style.css?<?php echo filemtime(__DIR__.'/style.css'); ?>">
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="" />
-  <meta property="og:description" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="" />
+  <meta property="og:title" content="Ryan McCahan - Developer" />
+  <meta property="og:description" content="Personal portfolio site for Ryan McCahan, a Denver-based full-stack developer." />
+  <meta property="og:url" content="https://ryan.mccahan.net/" />
+  <meta property="og:image" content="https://ryan.mccahan.net/dist/og-image.png" />
+  <meta property="og:site_name" content="Ryan McCahan Development" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:title" content="" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
