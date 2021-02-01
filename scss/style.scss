@@ -1,0 +1,110 @@
+@import 'reset.scss';
+@import 'mixins.scss';
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+}
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  .section-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 77px;
+    padding: 80px 80px;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: linear-gradient(180deg, #65BEFE 0%, #5876C5 100%);
+      border-radius: 86px;
+      width: 90%;
+      height: 120%;
+      transform: translate(-50%,-50%) rotate(2.04deg);
+      z-index: -1;
+    }
+
+    .info {
+      margin-right: 40px;
+
+      h1 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 600;
+
+        span {
+          text-decoration: underline dotted #ccc;
+        }
+      }
+
+      h2 {
+        font-size: 34px;
+        font-weight: 400;
+        margin: 15px 0 0;
+      }
+
+      > a {
+        font-size: 36px;
+        font-weight: 400;
+        margin: 0;
+        text-decoration: underline;
+        color: #111;
+        overflow: hidden;
+        transition: clip-path 275ms ease;
+        position: relative;
+        display: inline-block;
+
+        &:hover::before {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        &::before {
+          position: absolute;
+          content: attr(data-content);
+          color: #5876C5;
+          text-decoration: underline;
+          clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+          transition: clip-path 275ms ease;
+        }
+      }
+
+      .social {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        align-items: center;
+        padding: 0;
+        margin: 25px 0 0;
+
+        svg {
+          max-width: 48px;
+          transition: transform 0.2s ease-in-out;
+          transform: scale(0.8);
+        }
+
+        a:hover svg {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .photo {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}
